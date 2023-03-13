@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Analytic_dbModelContainer" CdmEntityContainer="Analytic_dbEntities1">
+    <EntitySetMapping Name="Analityc_Finished_Products">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Finished_Products">
+        <MappingFragment StoreEntitySet="Analityc_Finished_Products">
+          <ScalarProperty Name="Analityc_Finished_Products_id" ColumnName="Analityc_Finished_Products_id" />
+          <ScalarProperty Name="Analityc_Finished_Products_Name" ColumnName="Analityc_Finished_Products_Name" />
+          <ScalarProperty Name="Analityc_Finished_Products_Weight" ColumnName="Analityc_Finished_Products_Weight" />
+          <ScalarProperty Name="Analityc_Finished_Products_Number_Boxes" ColumnName="Analityc_Finished_Products_Number_Boxes" />
+          <ScalarProperty Name="Analityc_Finished_Products_Description" ColumnName="Analityc_Finished_Products_Description" />
+          <ScalarProperty Name="Analityc_Finished_Products_Date" ColumnName="Analityc_Finished_Products_Date" />
+          <ScalarProperty Name="Analityc_Finished_Products_Status" ColumnName="Analityc_Finished_Products_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Main">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Main">
+        <MappingFragment StoreEntitySet="Analityc_Main">
+          <ScalarProperty Name="Analityc_Main_id" ColumnName="Analityc_Main_id" />
+          <ScalarProperty Name="Analityc_Stock_id" ColumnName="Analityc_Stock_id" />
+          <ScalarProperty Name="Analityc_Plan_id" ColumnName="Analityc_Plan_id" />
+          <ScalarProperty Name="Analityc_Order_id" ColumnName="Analityc_Order_id" />
+          <ScalarProperty Name="Analityc_Recipe_id" ColumnName="Analityc_Recipe_id" />
+          <ScalarProperty Name="Analityc_Finished_Products_id" ColumnName="Analityc_Finished_Products_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Order">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Order">
+        <MappingFragment StoreEntitySet="Analityc_Order">
+          <ScalarProperty Name="Analityc_Order_id" ColumnName="Analityc_Order_id" />
+          <ScalarProperty Name="Analityc_Order_Name" ColumnName="Analityc_Order_Name" />
+          <ScalarProperty Name="Analityc_Order_Vendor_Code" ColumnName="Analityc_Order_Vendor_Code" />
+          <ScalarProperty Name="Analityc_Order_Weight" ColumnName="Analityc_Order_Weight" />
+          <ScalarProperty Name="Analityc_Order_Number_Boxes" ColumnName="Analityc_Order_Number_Boxes" />
+          <ScalarProperty Name="Analityc_Order_Date" ColumnName="Analityc_Order_Date" />
+          <ScalarProperty Name="Analityc_Order_Status" ColumnName="Analityc_Order_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Plan">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Plan">
+        <MappingFragment StoreEntitySet="Analityc_Plan">
+          <ScalarProperty Name="Analityc_Plan_id" ColumnName="Analityc_Plan_id" />
+          <ScalarProperty Name="Analityc_Plan_Day_id" ColumnName="Analityc_Plan_Day_id" />
+          <ScalarProperty Name="Analityc_Plan_Week_id" ColumnName="Analityc_Plan_Week_id" />
+          <ScalarProperty Name="Analityc_Plan_Month_id" ColumnName="Analityc_Plan_Month_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Plan_Day">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Plan_Day">
+        <MappingFragment StoreEntitySet="Analityc_Plan_Day">
+          <ScalarProperty Name="Analityc_Plan_Day_id" ColumnName="Analityc_Plan_Day_id" />
+          <ScalarProperty Name="Analityc_Plan_Day_Nomenclature" ColumnName="Analityc_Plan_Day_Nomenclature" />
+          <ScalarProperty Name="Analityc_Plan_Day_Date" ColumnName="Analityc_Plan_Day_Date" />
+          <ScalarProperty Name="Analityc_Plan_Day_Volume" ColumnName="Analityc_Plan_Day_Volume" />
+          <ScalarProperty Name="Analityc_Plan_Day_Note" ColumnName="Analityc_Plan_Day_Note" />
+          <ScalarProperty Name="Analityc_Plan_Day_Status" ColumnName="Analityc_Plan_Day_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Plan_Month">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Plan_Month">
+        <MappingFragment StoreEntitySet="Analityc_Plan_Month">
+          <ScalarProperty Name="Analityc_Plan_Month_id" ColumnName="Analityc_Plan_Month_id" />
+          <ScalarProperty Name="Analityc_Plan_Month_Nomenclature" ColumnName="Analityc_Plan_Month_Nomenclature" />
+          <ScalarProperty Name="Analityc_Plan_Month_Date" ColumnName="Analityc_Plan_Month_Date" />
+          <ScalarProperty Name="Analityc_Plan_Month_Volume" ColumnName="Analityc_Plan_Month_Volume" />
+          <ScalarProperty Name="Analityc_Plan_Month_Note" ColumnName="Analityc_Plan_Month_Note" />
+          <ScalarProperty Name="Analityc_Plan_Month_Status" ColumnName="Analityc_Plan_Month_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Plan_Week">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Plan_Week">
+        <MappingFragment StoreEntitySet="Analityc_Plan_Week">
+          <ScalarProperty Name="Analityc_Plan_Week_id" ColumnName="Analityc_Plan_Week_id" />
+          <ScalarProperty Name="Analityc_Plan_Week_Nomenclature" ColumnName="Analityc_Plan_Week_Nomenclature" />
+          <ScalarProperty Name="Analityc_Plan_Week_Date" ColumnName="Analityc_Plan_Week_Date" />
+          <ScalarProperty Name="Analityc_Plan_Week_Volume" ColumnName="Analityc_Plan_Week_Volume" />
+          <ScalarProperty Name="Analityc_Plan_Week_Note" ColumnName="Analityc_Plan_Week_Note" />
+          <ScalarProperty Name="Analityc_Plan_Week_Status" ColumnName="Analityc_Plan_Week_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Recipe">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Recipe">
+        <MappingFragment StoreEntitySet="Analityc_Recipe">
+          <ScalarProperty Name="Analityc_Recipe_id" ColumnName="Analityc_Recipe_id" />
+          <ScalarProperty Name="Analityc_Recipe_Name" ColumnName="Analityc_Recipe_Name" />
+          <ScalarProperty Name="Analityc_Recipe_Ingredients_One" ColumnName="Analityc_Recipe_Ingredients_One" />
+          <ScalarProperty Name="Analityc_Recipe_Ingredients_Two" ColumnName="Analityc_Recipe_Ingredients_Two" />
+          <ScalarProperty Name="Analityc_Recipe_Ingredients_Three" ColumnName="Analityc_Recipe_Ingredients_Three" />
+          <ScalarProperty Name="Analityc_Recipe_Ingredients_Four" ColumnName="Analityc_Recipe_Ingredients_Four" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_Stock">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_Stock">
+        <MappingFragment StoreEntitySet="Analityc_Stock">
+          <ScalarProperty Name="Analityc_Stock_id" ColumnName="Analityc_Stock_id" />
+          <ScalarProperty Name="Analityc_Stock_Name" ColumnName="Analityc_Stock_Name" />
+          <ScalarProperty Name="Analityc_Stock_Feature" ColumnName="Analityc_Stock_Feature" />
+          <ScalarProperty Name="Analityc_Stock_Weight" ColumnName="Analityc_Stock_Weight" />
+          <ScalarProperty Name="Analityc_Stock_Description" ColumnName="Analityc_Stock_Description" />
+          <ScalarProperty Name="Analityc_Stock_Date" ColumnName="Analityc_Stock_Date" />
+          <ScalarProperty Name="Analityc_Stock_Status" ColumnName="Analityc_Stock_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analityc_User">
+      <EntityTypeMapping TypeName="Analytic_dbModel.Analityc_User">
+        <MappingFragment StoreEntitySet="Analityc_User">
+          <ScalarProperty Name="Analityc_User_id" ColumnName="Analityc_User_id" />
+          <ScalarProperty Name="Analityc_User_Login" ColumnName="Analityc_User_Login" />
+          <ScalarProperty Name="Analityc_User_Password" ColumnName="Analityc_User_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Analytic_dbModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Analytic_dbModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Analytic_dbModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Analytic_dbModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Analytic_dbModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Analytic_dbModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Analytic_dbModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Analytic_dbModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Analytic_dbModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Analytic_dbModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Analytic_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Analityc_Finished_Products">
+    <Key>
+      <PropertyRef Name="Analityc_Finished_Products_id" />
+    </Key>
+    <Property Name="Analityc_Finished_Products_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Finished_Products_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Finished_Products_Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Finished_Products_Number_Boxes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Finished_Products_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Finished_Products_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Finished_Products_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Main" Relationship="Self.FK_Analityc_Main_Analityc_Finished_Products" FromRole="Analityc_Finished_Products" ToRole="Analityc_Main" />
+  </EntityType>
+  <EntityType Name="Analityc_Main">
+    <Key>
+      <PropertyRef Name="Analityc_Main_id" />
+    </Key>
+    <Property Name="Analityc_Main_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Stock_id" Type="Int32" />
+    <Property Name="Analityc_Plan_id" Type="Int32" />
+    <Property Name="Analityc_Order_id" Type="Int32" />
+    <Property Name="Analityc_Recipe_id" Type="Int32" />
+    <Property Name="Analityc_Finished_Products_id" Type="Int32" />
+    <NavigationProperty Name="Analityc_Finished_Products" Relationship="Self.FK_Analityc_Main_Analityc_Finished_Products" FromRole="Analityc_Main" ToRole="Analityc_Finished_Products" />
+    <NavigationProperty Name="Analityc_Order" Relationship="Self.FK_Analityc_Main_Analityc_Order" FromRole="Analityc_Main" ToRole="Analityc_Order" />
+    <NavigationProperty Name="Analityc_Plan" Relationship="Self.FK_Analityc_Main_Analityc_Plan" FromRole="Analityc_Main" ToRole="Analityc_Plan" />
+    <NavigationProperty Name="Analityc_Recipe" Relationship="Self.FK_Analityc_Main_Analityc_Recipe" FromRole="Analityc_Main" ToRole="Analityc_Recipe" />
+    <NavigationProperty Name="Analityc_Stock" Relationship="Self.FK_Analityc_Main_Analityc_Stock" FromRole="Analityc_Main" ToRole="Analityc_Stock" />
+  </EntityType>
+  <EntityType Name="Analityc_Order">
+    <Key>
+      <PropertyRef Name="Analityc_Order_id" />
+    </Key>
+    <Property Name="Analityc_Order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Order_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Order_Vendor_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Order_Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Order_Number_Boxes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Order_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Order_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Main" Relationship="Self.FK_Analityc_Main_Analityc_Order" FromRole="Analityc_Order" ToRole="Analityc_Main" />
+  </EntityType>
+  <EntityType Name="Analityc_Plan">
+    <Key>
+      <PropertyRef Name="Analityc_Plan_id" />
+    </Key>
+    <Property Name="Analityc_Plan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Plan_Day_id" Type="Int32" />
+    <Property Name="Analityc_Plan_Week_id" Type="Int32" />
+    <Property Name="Analityc_Plan_Month_id" Type="Int32" />
+    <NavigationProperty Name="Analityc_Main" Relationship="Self.FK_Analityc_Main_Analityc_Plan" FromRole="Analityc_Plan" ToRole="Analityc_Main" />
+    <NavigationProperty Name="Analityc_Plan_Day" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Day" FromRole="Analityc_Plan" ToRole="Analityc_Plan_Day" />
+    <NavigationProperty Name="Analityc_Plan_Month" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Month" FromRole="Analityc_Plan" ToRole="Analityc_Plan_Month" />
+    <NavigationProperty Name="Analityc_Plan_Week" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Week" FromRole="Analityc_Plan" ToRole="Analityc_Plan_Week" />
+  </EntityType>
+  <EntityType Name="Analityc_Plan_Day">
+    <Key>
+      <PropertyRef Name="Analityc_Plan_Day_id" />
+    </Key>
+    <Property Name="Analityc_Plan_Day_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Plan_Day_Nomenclature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Day_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Day_Volume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Day_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Day_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Plan" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Day" FromRole="Analityc_Plan_Day" ToRole="Analityc_Plan" />
+  </EntityType>
+  <EntityType Name="Analityc_Plan_Month">
+    <Key>
+      <PropertyRef Name="Analityc_Plan_Month_id" />
+    </Key>
+    <Property Name="Analityc_Plan_Month_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Plan_Month_Nomenclature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Month_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Month_Volume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Month_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Month_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Plan" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Month" FromRole="Analityc_Plan_Month" ToRole="Analityc_Plan" />
+  </EntityType>
+  <EntityType Name="Analityc_Plan_Week">
+    <Key>
+      <PropertyRef Name="Analityc_Plan_Week_id" />
+    </Key>
+    <Property Name="Analityc_Plan_Week_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Plan_Week_Nomenclature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Week_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Week_Volume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Week_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Plan_Week_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Plan" Relationship="Self.FK_Analityc_Plan_Analityc_Plan_Week" FromRole="Analityc_Plan_Week" ToRole="Analityc_Plan" />
+  </EntityType>
+  <EntityType Name="Analityc_Recipe">
+    <Key>
+      <PropertyRef Name="Analityc_Recipe_id" />
+    </Key>
+    <Property Name="Analityc_Recipe_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Recipe_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Recipe_Ingredients_One" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Recipe_Ingredients_Two" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Recipe_Ingredients_Three" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Recipe_Ingredients_Four" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Main" Relationship="Self.FK_Analityc_Main_Analityc_Recipe" FromRole="Analityc_Recipe" ToRole="Analityc_Main" />
+  </EntityType>
+  <EntityType Name="Analityc_Stock">
+    <Key>
+      <PropertyRef Name="Analityc_Stock_id" />
+    </Key>
+    <Property Name="Analityc_Stock_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_Stock_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Stock_Feature" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Stock_Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Stock_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Stock_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_Stock_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Analityc_Main" Relationship="Self.FK_Analityc_Main_Analityc_Stock" FromRole="Analityc_Stock" ToRole="Analityc_Main" />
+  </EntityType>
+  <EntityType Name="Analityc_User">
+    <Key>
+      <PropertyRef Name="Analityc_User_id" />
+    </Key>
+    <Property Name="Analityc_User_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Analityc_User_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Analityc_User_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Analityc_Main_Analityc_Finished_Products">
+    <End Role="Analityc_Finished_Products" Type="Self.Analityc_Finished_Products" Multiplicity="0..1" />
+    <End Role="Analityc_Main" Type="Self.Analityc_Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Finished_Products">
+        <PropertyRef Name="Analityc_Finished_Products_id" />
+      </Principal>
+      <Dependent Role="Analityc_Main">
+        <PropertyRef Name="Analityc_Finished_Products_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Main_Analityc_Order">
+    <End Role="Analityc_Order" Type="Self.Analityc_Order" Multiplicity="0..1" />
+    <End Role="Analityc_Main" Type="Self.Analityc_Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Order">
+        <PropertyRef Name="Analityc_Order_id" />
+      </Principal>
+      <Dependent Role="Analityc_Main">
+        <PropertyRef Name="Analityc_Order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Main_Analityc_Plan">
+    <End Role="Analityc_Plan" Type="Self.Analityc_Plan" Multiplicity="0..1" />
+    <End Role="Analityc_Main" Type="Self.Analityc_Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Plan">
+        <PropertyRef Name="Analityc_Plan_id" />
+      </Principal>
+      <Dependent Role="Analityc_Main">
+        <PropertyRef Name="Analityc_Plan_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Main_Analityc_Recipe">
+    <End Role="Analityc_Recipe" Type="Self.Analityc_Recipe" Multiplicity="0..1" />
+    <End Role="Analityc_Main" Type="Self.Analityc_Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Recipe">
+        <PropertyRef Name="Analityc_Recipe_id" />
+      </Principal>
+      <Dependent Role="Analityc_Main">
+        <PropertyRef Name="Analityc_Recipe_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Main_Analityc_Stock">
+    <End Role="Analityc_Stock" Type="Self.Analityc_Stock" Multiplicity="0..1" />
+    <End Role="Analityc_Main" Type="Self.Analityc_Main" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Stock">
+        <PropertyRef Name="Analityc_Stock_id" />
+      </Principal>
+      <Dependent Role="Analityc_Main">
+        <PropertyRef Name="Analityc_Stock_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Plan_Analityc_Plan_Day">
+    <End Role="Analityc_Plan_Day" Type="Self.Analityc_Plan_Day" Multiplicity="0..1" />
+    <End Role="Analityc_Plan" Type="Self.Analityc_Plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Plan_Day">
+        <PropertyRef Name="Analityc_Plan_Day_id" />
+      </Principal>
+      <Dependent Role="Analityc_Plan">
+        <PropertyRef Name="Analityc_Plan_Day_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Plan_Analityc_Plan_Month">
+    <End Role="Analityc_Plan_Month" Type="Self.Analityc_Plan_Month" Multiplicity="0..1" />
+    <End Role="Analityc_Plan" Type="Self.Analityc_Plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Plan_Month">
+        <PropertyRef Name="Analityc_Plan_Month_id" />
+      </Principal>
+      <Dependent Role="Analityc_Plan">
+        <PropertyRef Name="Analityc_Plan_Month_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Analityc_Plan_Analityc_Plan_Week">
+    <End Role="Analityc_Plan_Week" Type="Self.Analityc_Plan_Week" Multiplicity="0..1" />
+    <End Role="Analityc_Plan" Type="Self.Analityc_Plan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Analityc_Plan_Week">
+        <PropertyRef Name="Analityc_Plan_Week_id" />
+      </Principal>
+      <Dependent Role="Analityc_Plan">
+        <PropertyRef Name="Analityc_Plan_Week_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Analytic_dbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Analityc_Finished_Products" EntityType="Self.Analityc_Finished_Products" />
+    <EntitySet Name="Analityc_Main" EntityType="Self.Analityc_Main" />
+    <EntitySet Name="Analityc_Order" EntityType="Self.Analityc_Order" />
+    <EntitySet Name="Analityc_Plan" EntityType="Self.Analityc_Plan" />
+    <EntitySet Name="Analityc_Plan_Day" EntityType="Self.Analityc_Plan_Day" />
+    <EntitySet Name="Analityc_Plan_Month" EntityType="Self.Analityc_Plan_Month" />
+    <EntitySet Name="Analityc_Plan_Week" EntityType="Self.Analityc_Plan_Week" />
+    <EntitySet Name="Analityc_Recipe" EntityType="Self.Analityc_Recipe" />
+    <EntitySet Name="Analityc_Stock" EntityType="Self.Analityc_Stock" />
+    <EntitySet Name="Analityc_User" EntityType="Self.Analityc_User" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Analityc_Main_Analityc_Finished_Products" Association="Self.FK_Analityc_Main_Analityc_Finished_Products">
+      <End Role="Analityc_Finished_Products" EntitySet="Analityc_Finished_Products" />
+      <End Role="Analityc_Main" EntitySet="Analityc_Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Main_Analityc_Order" Association="Self.FK_Analityc_Main_Analityc_Order">
+      <End Role="Analityc_Order" EntitySet="Analityc_Order" />
+      <End Role="Analityc_Main" EntitySet="Analityc_Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Main_Analityc_Plan" Association="Self.FK_Analityc_Main_Analityc_Plan">
+      <End Role="Analityc_Plan" EntitySet="Analityc_Plan" />
+      <End Role="Analityc_Main" EntitySet="Analityc_Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Main_Analityc_Recipe" Association="Self.FK_Analityc_Main_Analityc_Recipe">
+      <End Role="Analityc_Recipe" EntitySet="Analityc_Recipe" />
+      <End Role="Analityc_Main" EntitySet="Analityc_Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Main_Analityc_Stock" Association="Self.FK_Analityc_Main_Analityc_Stock">
+      <End Role="Analityc_Stock" EntitySet="Analityc_Stock" />
+      <End Role="Analityc_Main" EntitySet="Analityc_Main" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Plan_Analityc_Plan_Day" Association="Self.FK_Analityc_Plan_Analityc_Plan_Day">
+      <End Role="Analityc_Plan_Day" EntitySet="Analityc_Plan_Day" />
+      <End Role="Analityc_Plan" EntitySet="Analityc_Plan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Plan_Analityc_Plan_Month" Association="Self.FK_Analityc_Plan_Analityc_Plan_Month">
+      <End Role="Analityc_Plan_Month" EntitySet="Analityc_Plan_Month" />
+      <End Role="Analityc_Plan" EntitySet="Analityc_Plan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Analityc_Plan_Analityc_Plan_Week" Association="Self.FK_Analityc_Plan_Analityc_Plan_Week">
+      <End Role="Analityc_Plan_Week" EntitySet="Analityc_Plan_Week" />
+      <End Role="Analityc_Plan" EntitySet="Analityc_Plan" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Analytic_dbModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Analytic_dbModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
