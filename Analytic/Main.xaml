@@ -168,6 +168,19 @@
                         <TextBlock TextWrapping="Wrap" Style="{StaticResource menuButtonText}"><Run Text="Готовая"/><LineBreak/><Run Text="продукция"/></TextBlock>
                     </StackPanel>
                 </RadioButton>
+                <RadioButton  x:Name="Report"
+                              PreviewMouseDoubleClick="RadioButton_PreviewMouseDoubleClick"
+                              Style="{StaticResource menuButton}"
+                              Tag="{StaticResource color2}"
+                              Command="{Binding ShowCustomerViewCommand}"
+                              Checked="Report_Checked">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="CheckToSlot"
+                                      Style="{StaticResource menuButtonIcon}" />
+                        <TextBlock Text="Отчёт" TextWrapping="Wrap"
+                                   Style="{StaticResource menuButtonText}" />
+                    </StackPanel>
+                </RadioButton>
             </StackPanel>
         </Border>
         
