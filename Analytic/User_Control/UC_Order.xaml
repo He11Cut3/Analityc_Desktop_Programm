@@ -66,13 +66,16 @@
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <StackPanel>
-                                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">
-                                        <TextBlock Text="{Binding Name}"  Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Code}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Weight}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Boxes}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Date}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Status}" Style="{StaticResource uc_ButtonText}"/>
+                                    <WrapPanel Orientation="Vertical"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center"
+                                               Grid.Column="0">
+                                        <TextBlock Text="{Binding Analityc_Order_Name, StringFormat='Заказ: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Order_Vendor_Code, StringFormat='Код заказа: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Order_Weight, StringFormat='Вес: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Order_Number_Boxes, StringFormat='Содержимое коробок: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Order_Date, StringFormat='Дата: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Order_Status, StringFormat='Статус: {0}'}" Style="{StaticResource uc_ButtonText}"/>
                                     </WrapPanel>
                                     <Button x:Name="Edit_del_Order"
                                          Grid.Row="0"

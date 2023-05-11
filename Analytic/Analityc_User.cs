@@ -16,6 +16,9 @@ namespace Analytic
     {
         public int Analityc_User_id { get; set; }
         public string Analityc_User_Login { get; set; }
+        public string Analityc_User_First_Name { get; set; }
+        public string Analityc_User_Last_Name { get; set; }
+        public string Analityc_User_Patronymic { get; set; }
         public string Analityc_User_Password { get; set; }
     }
 }

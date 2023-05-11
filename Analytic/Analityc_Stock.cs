@@ -14,12 +14,6 @@ namespace Analytic
     
     public partial class Analityc_Stock
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Stock()
-        {
-            this.Analityc_Main = new HashSet<Analityc_Main>();
-        }
-    
         public int Analityc_Stock_id { get; set; }
         public string Analityc_Stock_Name { get; set; }
         public string Analityc_Stock_Feature { get; set; }
@@ -27,52 +21,5 @@ namespace Analytic
         public string Analityc_Stock_Description { get; set; }
         public string Analityc_Stock_Date { get; set; }
         public string Analityc_Stock_Status { get; set; }
-
-        public string Name
-        {
-            get
-            {
-                return "Наименование: " + this.Analityc_Stock_Name;
-            }
-        }
-        public string Feature
-        {
-            get
-            {
-                return "Характеристики: " + this.Analityc_Stock_Feature;
-            }
-        }
-        public string Weight
-        {
-            get
-            {
-                return "Вес: " + this.Analityc_Stock_Weight;
-            }
-        }
-        public string Description
-        {
-            get
-            {
-                return "Описание: " + this.Analityc_Stock_Description;
-            }
-        }
-        public string Date
-        {
-            get
-            {
-                return "Дата окончания карантина: " + this.Analityc_Stock_Date;
-            }
-        }
-        public string Status
-        {
-            get
-            {
-                return "Статус: " + this.Analityc_Stock_Status;
-            }
-        }
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Main> Analityc_Main { get; set; }
     }
 }

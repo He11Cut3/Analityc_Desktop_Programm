@@ -15,10 +15,10 @@ namespace Analytic
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Analytic_dbEntities1 : DbContext
+    public partial class Analytic_dbEntities : DbContext
     {
-        public Analytic_dbEntities1()
-            : base("name=Analytic_dbEntities1")
+        public Analytic_dbEntities()
+            : base("name=Analytic_dbEntities")
         {
         }
     

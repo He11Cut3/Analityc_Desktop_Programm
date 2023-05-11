@@ -21,7 +21,7 @@ namespace Analytic.Edit
             PProduct_Boxes.IsEnabled = false;
             PProduct_Status.IsEnabled = false;
             PProduct_Date.IsEnabled = false;
-            PProduct_Status.Text = "2-х дневный карантин";
+            PProduct_Status.Text = "2-х дневное тестирование";
             string time_now = DateTime.Now.AddDays(2).ToString("dd.MM.yyyy");
             PProduct_Date.Text = time_now;
             PProduct_Boxes.Text = "В ожидании";

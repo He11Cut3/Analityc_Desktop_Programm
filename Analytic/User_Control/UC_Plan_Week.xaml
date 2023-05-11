@@ -64,11 +64,16 @@
                                 </Grid.RowDefinitions>
                                 <StackPanel>
                                     <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">
-                                        <TextBlock Text="{Binding Nomenclature_week}" Style="{StaticResource uc_ButtonText}" />
-                                        <TextBlock Text="{Binding Volume_week}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Note_week}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Date_week}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Status_week}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Plan_Day_Nomenclature, StringFormat='Номенклатура: {0}'}"
+                                                   Style="{StaticResource uc_ButtonText}" />
+                                        <TextBlock Text="{Binding Analityc_Plan_Day_Date, StringFormat='Выполнить до: {0}'}"
+                                                   Style="{StaticResource uc_ButtonText}" />
+                                        <TextBlock Text="{Binding Analityc_Plan_Day_Volume, StringFormat='Обьем: {0}'}"
+                                                   Style="{StaticResource uc_ButtonText}" />
+                                        <TextBlock Text="{Binding Analityc_Plan_Day_Note, StringFormat='Примечание: {0}'}"
+                                                   Style="{StaticResource uc_ButtonText}" />
+                                        <TextBlock Text="{Binding Analityc_Plan_Day_Status, StringFormat='Статус выполнения: {0}'}"
+                                                   Style="{StaticResource uc_ButtonText}" />
                                     </WrapPanel>
                                     <Button x:Name="Edit_Del_Week"
                                          Grid.Row="0"

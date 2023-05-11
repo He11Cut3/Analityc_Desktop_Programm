@@ -19,7 +19,7 @@ namespace Analytic
             this._context = analytic_DbEntities1;
             this._uc = uC_User;
             SStock_Status.IsEnabled = false;
-            SStock_Status.Text = "2-х недельный карантин";
+            SStock_Status.Text = "2-х недельное тестирование";
             SStock_Date.IsEnabled = false;
             string time_2_week = DateTime.Now.AddDays(14).ToString("dd.MM.yyyy");
             SStock_Date.Text = time_2_week;

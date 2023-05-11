@@ -14,21 +14,9 @@ namespace Analytic
     
     public partial class Analityc_Plan
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Plan()
-        {
-            this.Analityc_Main = new HashSet<Analityc_Main>();
-        }
-    
         public int Analityc_Plan_id { get; set; }
         public Nullable<int> Analityc_Plan_Day_id { get; set; }
         public Nullable<int> Analityc_Plan_Week_id { get; set; }
         public Nullable<int> Analityc_Plan_Month_id { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Main> Analityc_Main { get; set; }
-        public virtual Analityc_Plan_Day Analityc_Plan_Day { get; set; }
-        public virtual Analityc_Plan_Month Analityc_Plan_Month { get; set; }
-        public virtual Analityc_Plan_Week Analityc_Plan_Week { get; set; }
     }
 }

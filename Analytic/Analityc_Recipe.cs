@@ -14,57 +14,11 @@ namespace Analytic
     
     public partial class Analityc_Recipe
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Recipe()
-        {
-            this.Analityc_Main = new HashSet<Analityc_Main>();
-        }
-    
         public int Analityc_Recipe_id { get; set; }
         public string Analityc_Recipe_Name { get; set; }
         public string Analityc_Recipe_Ingredients_One { get; set; }
         public string Analityc_Recipe_Ingredients_Two { get; set; }
         public string Analityc_Recipe_Ingredients_Three { get; set; }
         public string Analityc_Recipe_Ingredients_Four { get; set; }
-
-        public string Name
-        {
-            get
-            {
-                return "Наименование: " + this.Analityc_Recipe_Name;
-            }
-        }
-        public string One
-        {
-            get
-            {
-                return "Сахар (кг): " + this.Analityc_Recipe_Ingredients_One;
-            }
-        }
-        public string Two
-        {
-            get
-            {
-                return "Вода (л): " + this.Analityc_Recipe_Ingredients_Two;
-            }
-        }
-        public string Three
-        {
-            get
-            {
-                return "Патока (кг): " + this.Analityc_Recipe_Ingredients_Three;
-            }
-        }
-        public string Four
-        {
-            get
-            {
-                return "Ароматизатор (кг): " + this.Analityc_Recipe_Ingredients_Four;
-            }
-        }
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Main> Analityc_Main { get; set; }
     }
 }

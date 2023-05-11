@@ -14,60 +14,11 @@ namespace Analytic
     
     public partial class Analityc_Plan_Month
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Plan_Month()
-        {
-            this.Analityc_Plan = new HashSet<Analityc_Plan>();
-        }
-    
         public int Analityc_Plan_Month_id { get; set; }
         public string Analityc_Plan_Month_Nomenclature { get; set; }
         public string Analityc_Plan_Month_Date { get; set; }
         public string Analityc_Plan_Month_Volume { get; set; }
         public string Analityc_Plan_Month_Note { get; set; }
         public string Analityc_Plan_Month_Status { get; set; }
-
-        public string Nomenclature_month
-        {
-            get
-            {
-                return "Номенклатура: " + this.Analityc_Plan_Month_Nomenclature;
-            }
-        }
-
-        public string Date_month
-        {
-            get
-            {
-                return "Выполнить до: " + this.Analityc_Plan_Month_Date;
-            }
-        }
-
-        public string Status_month
-        {
-            get
-            {
-                return "Статус выполнения: " + this.Analityc_Plan_Month_Status;
-            }
-        }
-
-        public string Volume_month
-        {
-            get
-            {
-                return "Обьем: " + this.Analityc_Plan_Month_Volume;
-            }
-        }
-        public string Note_month
-        {
-            get
-            {
-                return "Примечание: " + this.Analityc_Plan_Month_Note;
-            }
-        }
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Plan> Analityc_Plan { get; set; }
     }
 }

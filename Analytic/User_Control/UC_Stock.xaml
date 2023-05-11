@@ -68,12 +68,12 @@
                                 </Grid.RowDefinitions>
                                 <StackPanel>
                                     <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">
-                                        <TextBlock Text="{Binding Name}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Feature}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Weight}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Description}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Date}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Status}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Name, StringFormat='Наименование: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Feature, StringFormat='Характеристики: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Weight, StringFormat='Вес: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Description, StringFormat='Описание: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Date, StringFormat='Дата окончания карантина: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Stock_Status, StringFormat='Статус: {0}'}" Style="{StaticResource uc_ButtonText}"/>
                                     </WrapPanel>
                                     <Button x:Name="Edit_del"
                                          Grid.Row="0"

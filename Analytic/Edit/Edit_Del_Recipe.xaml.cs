@@ -48,7 +48,7 @@ namespace Analytic.Edit
                 int F1, F2, F3, F4, F5, F6;
                 int Sum_Sugar, Sum_Water, Sum_Treacle, Sum_Flavoring;
                 //Сахар
-                var Sugar = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "Сироп(Сахар)").ToList();
+                var Sugar = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "АРМ по информатике (ПК)").ToList();
                 T1.Text = "";
 
                 foreach (Analityc_Stock status_Sugar1 in Sugar)
@@ -66,7 +66,7 @@ namespace Analytic.Edit
                 }
 
                 //Вода
-                var Water = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "Сироп(Вода)").ToList();
+                var Water = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "АРМ по информатике (Стол)").ToList();
                 T1.Text = "";
 
 
@@ -85,7 +85,7 @@ namespace Analytic.Edit
                 }
 
                 //Патока
-                var Treacle = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "Сироп(Патока)").ToList();
+                var Treacle = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "АРМ по информатике (Монитор(ы))").ToList();
                 T1.Text = "";
 
                 foreach (Analityc_Stock status_Treacle1 in Treacle)
@@ -103,7 +103,7 @@ namespace Analytic.Edit
                 }
 
                 //Ароматизатор
-                var Flavoring = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "Сироп(Ароматизатор)").ToList();
+                var Flavoring = _context.Analityc_Stock.Where(x => x.Analityc_Stock_Name == "АРМ по информатике (Комплект периферии)").ToList();
                 T1.Text = "";
 
                 foreach (Analityc_Stock status_Flavoring1 in Flavoring)
@@ -124,12 +124,12 @@ namespace Analytic.Edit
 
                 _context.Analityc_Finished_Products.Add(new Analityc_Finished_Products()
                 {
-                    Analityc_Finished_Products_Name = "Сироп",
+                    Analityc_Finished_Products_Name = "АРМ по информатике",
                     Analityc_Finished_Products_Date = time_now,
-                    Analityc_Finished_Products_Weight = "5000",
+                    Analityc_Finished_Products_Weight = "10",
                     Analityc_Finished_Products_Number_Boxes = "В ожидании",
                     Analityc_Finished_Products_Description = "",
-                    Analityc_Finished_Products_Status = "2-х дневный карантин",
+                    Analityc_Finished_Products_Status = "2-х дневное тестирование",
                 });
 
                 this.Close();

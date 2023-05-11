@@ -14,12 +14,6 @@ namespace Analytic
     
     public partial class Analityc_Order
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Order()
-        {
-            this.Analityc_Main = new HashSet<Analityc_Main>();
-        }
-    
         public int Analityc_Order_id { get; set; }
         public string Analityc_Order_Name { get; set; }
         public string Analityc_Order_Vendor_Code { get; set; }
@@ -27,38 +21,5 @@ namespace Analytic
         public string Analityc_Order_Number_Boxes { get; set; }
         public string Analityc_Order_Date { get; set; }
         public string Analityc_Order_Status { get; set; }
-
-        public string Name
-        {
-            get
-            {
-                return "Заказ: " + this.Analityc_Order_Name;
-            }
-        }
-        public string Code
-        {
-            get
-            {
-                return "Код заказа: " + this.Analityc_Order_Vendor_Code;
-            }
-        }
-        public string Weight
-        {
-            get
-            {
-                return "Вес: " + this.Analityc_Order_Weight;
-            }
-        }
-        public string Boxes
-        {
-            get
-            {
-                return "Содержимое коробок: " + this.Analityc_Order_Number_Boxes;
-            }
-        }
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Main> Analityc_Main { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace Analytic.Edit
 
             foreach (Analityc_Stock status in recordsToUpdate)
             {
-                status.Analityc_Stock_Status = "На произодстве. \nСырье подходит для обработки. ";
+                status.Analityc_Stock_Status = "На произодстве. \nКомплектующие подходят для работы. ";
                 _context.SaveChanges();
             }
             _list = _context.Analityc_Stock.ToList();

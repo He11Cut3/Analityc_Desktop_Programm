@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\Руслан-ПК\Desktop\Analytic\Analytic\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Руслан-ПК\Desktop\Analityc_Desktop_Programm_Version_2-main\Analityc_Desktop_Programm_Version_2-main\Analytic\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

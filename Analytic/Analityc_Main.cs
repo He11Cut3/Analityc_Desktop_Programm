@@ -20,11 +20,5 @@ namespace Analytic
         public Nullable<int> Analityc_Order_id { get; set; }
         public Nullable<int> Analityc_Recipe_id { get; set; }
         public Nullable<int> Analityc_Finished_Products_id { get; set; }
-    
-        public virtual Analityc_Finished_Products Analityc_Finished_Products { get; set; }
-        public virtual Analityc_Order Analityc_Order { get; set; }
-        public virtual Analityc_Plan Analityc_Plan { get; set; }
-        public virtual Analityc_Recipe Analityc_Recipe { get; set; }
-        public virtual Analityc_Stock Analityc_Stock { get; set; }
     }
 }

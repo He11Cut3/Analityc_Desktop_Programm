@@ -80,10 +80,10 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
             <TextBlock Text="Наименование" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Ингридиент №1 (кг)" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Ингридиент №2 (кг)" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Ингридиент №3 (кг)" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Ингридиент №4 (кг)" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="ПК (шт)" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="Стол (шт)" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="Монитор(ы) (шт)" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="Комплект периферии (шт)" Style="{StaticResource text_ButtonText}" Margin="0,15" Width="215"/>
         </StackPanel>
         <Button x:Name="Recipe"
                 Grid.Column="1"

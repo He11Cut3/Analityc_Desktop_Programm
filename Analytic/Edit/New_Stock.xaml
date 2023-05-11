@@ -86,9 +86,9 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
             <TextBlock Text="Наименование" Style="{StaticResource text_ButtonText}"/>
             <TextBlock Text="Характеристики" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Вес" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="Кол-во" Style="{StaticResource text_ButtonText}"/>
             <TextBlock Text="Описание" Style="{StaticResource text_ButtonText}"/>
-            <TextBlock Text="Дата выхода с карантина" Style="{StaticResource text_ButtonText}"/>
+            <TextBlock Text="Дата выхода с тестирования" Style="{StaticResource text_ButtonText}"/>
             <TextBlock Text="Статус" Style="{StaticResource text_ButtonText}"/>
         </StackPanel>
         <Button x:Name="Stock"

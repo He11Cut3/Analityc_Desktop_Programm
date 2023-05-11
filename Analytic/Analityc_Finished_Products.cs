@@ -14,12 +14,6 @@ namespace Analytic
     
     public partial class Analityc_Finished_Products
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Analityc_Finished_Products()
-        {
-            this.Analityc_Main = new HashSet<Analityc_Main>();
-        }
-    
         public int Analityc_Finished_Products_id { get; set; }
         public string Analityc_Finished_Products_Name { get; set; }
         public string Analityc_Finished_Products_Weight { get; set; }
@@ -27,52 +21,5 @@ namespace Analytic
         public string Analityc_Finished_Products_Description { get; set; }
         public string Analityc_Finished_Products_Date { get; set; }
         public string Analityc_Finished_Products_Status { get; set; }
-
-        public string Name
-        {
-            get
-            {
-                return "Наименование: " + this.Analityc_Finished_Products_Name;
-            }
-        }
-        public string Weight
-        {
-            get
-            {
-                return "Вес (кг/л): " + this.Analityc_Finished_Products_Weight;
-            }
-        }
-        public string Description
-        {
-            get
-            {
-                return "Описание: " + this.Analityc_Finished_Products_Description;
-            }
-        }
-        public string Boxes
-        {
-            get
-            {
-                return "Эталонный образец: " + this.Analityc_Finished_Products_Number_Boxes;
-            }
-        }
-        public string Date
-        {
-            get
-            {
-                return "Дата выхода с карантина: " + this.Analityc_Finished_Products_Date;
-            }
-        }
-        public string Status
-        {
-            get
-            {
-                return "Статус: " + this.Analityc_Finished_Products_Status;
-            }
-        }
-
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Analityc_Main> Analityc_Main { get; set; }
     }
 }

@@ -66,11 +66,11 @@
                                 </Grid.RowDefinitions>
                                 <StackPanel>
                                     <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0">
-                                        <TextBlock Text="{Binding Name}" Style="{StaticResource uc_ButtonText}" />
-                                        <TextBlock Text="{Binding One}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Two}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Three}" Style="{StaticResource uc_ButtonText}"/>
-                                        <TextBlock Text="{Binding Four}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Recipe_Name, StringFormat='Наименование: {0}'}" Style="{StaticResource uc_ButtonText}" />
+                                        <TextBlock Text="{Binding Analityc_Recipe_Ingredients_One, StringFormat='Ингр. 1: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Recipe_Ingredients_Two, StringFormat='Ингр. 2: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Recipe_Ingredients_Three, StringFormat='Ингр. 3: {0}'}" Style="{StaticResource uc_ButtonText}"/>
+                                        <TextBlock Text="{Binding Analityc_Recipe_Ingredients_Four, StringFormat='Ингр. 4: {0}'}" Style="{StaticResource uc_ButtonText}"/>
                                     </WrapPanel>
                                     <Button x:Name="Edit_del_Recipe"
                                          Grid.Row="0"
